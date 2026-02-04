@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You 💕</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💕</text></svg>">
+</head>
+<body>
+  
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+  
+  <!-- Floating Particles Container -->
+  <div class="particles" id="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  
+  <!-- ====================================
+       CHAPTER 1 - OPENING
+       ==================================== -->
+  <section class="chapter" id="chapter-1">
+    <div class="container">
+      <div class="chapter-content">
+        <p>Hey you… 💕</p>
+        <p>I made something for you.</p>
+        <p>Take your time.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ====================================
+       CHAPTER 2 - WHAT I SEE
+       ==================================== -->
+  <section class="chapter" id="chapter-2">
+    <div class="container">
+      <div class="chapter-content">
+        <p class="scale-breathe">You are beautiful.</p>
+        <p class="scale-breathe delay-2">Not just in the way you look—<br>but in how you are.</p>
+        <p class="scale-breathe delay-3">Your strength.<br>Your heart.<br>The way you care.</p>
+        <p class="scale-breathe delay-4">I see it all.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ====================================
+       CHAPTER 3 - MEMORY ANCHOR (PHOTO)
+       ==================================== -->
+  <section class="chapter" id="chapter-3">
+    <div class="container">
+      <div class="chapter-content">
+        <div class="photo-container" id="photoContainer">
+          <!-- REPLACE 'photo.jpg' WITH YOUR ACTUAL PHOTO -->
+          <img src="images/photo.jpeg" alt="Our Memory" id="photo">
+          <p class="photo-caption">This one stays with me.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ====================================
+       CHAPTER 4 - GROWTH
+       ==================================== -->
+  <section class="chapter" id="chapter-4">
+    <div class="container">
+      <div class="chapter-content">
+        <p class="slide-left">Being with you has changed me.</p>
+        <p class="slide-left delay-2">You've taught me patience.<br>How to listen better.<br>How to grow.</p>
+        <p class="slide-left delay-4">Even on the hard days…<br>I'm grateful for us.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ====================================
+       CHAPTER 5 - HONESTY
+       ==================================== -->
+  <section class="chapter vignette" id="chapter-5">
+    <div class="container">
+      <div class="chapter-content">
+        <p class="fade-in">I know it hasn't been perfect.</p>
+        <p class="fade-in delay-2">I've made mistakes.<br>I didn't always show up the way you needed.</p>
+        <p class="fade-in delay-4">I'm sorry for that.</p>
+        <p class="fade-in delay-5">But I'm here now.<br>And I want to do better.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ====================================
+       CHAPTER 6 - WHAT MATTERS
+       ==================================== -->
+  <section class="chapter" id="chapter-6">
+    <div class="container">
+      <div class="chapter-content">
+        <p class="bounce-in emphasis">You matter to me.</p>
+        <p class="bounce-in delay-2 emphasis">Deeply.</p>
+        <p class="bounce-in delay-3">I don't need perfect.<br>I just want real.</p>
+        <p class="bounce-in delay-4 emphasis">I want us.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ====================================
+       CHAPTER 7 - THE PAUSE
+       ==================================== -->
+  <section class="chapter" id="chapter-7">
+    <div class="container">
+      <div class="chapter-content">
+        <p class="glow-pulse">So…</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ====================================
+       CHAPTER 8 - THE QUESTION
+       ==================================== -->
+  <section class="chapter" id="chapter-8">
+    <div class="container">
+      <div class="chapter-content">
+        <p class="cinematic-reveal glow-text">Will you be my Valentine? 💗</p>
+        
+        <div class="button-container" id="buttonContainer">
+          <button class="valentine-button" id="btnYes">Yes 💗</button>
+          <button class="valentine-button" id="btnAlways">Always 💗</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ====================================
+       CHAPTER 9 - SOFT ENDING
+       ==================================== -->
+  <section class="chapter" id="chapter-9" style="opacity: 0; pointer-events: none;">
+    <div class="container">
+      <div class="chapter-content">
+        <p class="gentle-float">Thank you for being you.</p>
+        <p class="gentle-float delay-2">For choosing us.</p>
+        <p class="gentle-float delay-4">I'm really lucky.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ====================================
+       SCRIPTS
+       ==================================== -->
+  
+  <!-- GSAP Library (ScrollTrigger + Core) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  
+  <!-- Custom Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/interactions.js"></script>
+  
+</body>
+</html>
