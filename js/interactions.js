@@ -39,19 +39,21 @@ function handleValentineResponse() {
       ease: "power2.inOut",
       onComplete: () => {
         chapter8.style.pointerEvents = "none";
+        chapter8.style.visibility = "hidden";
       },
     });
 
-    // Fade in Chapter 9
+    // Reset and fade in Chapter 9
+    chapter9.style.opacity = "1";
+    chapter9.style.pointerEvents = "auto";
+    chapter9.style.visibility = "visible";
+
     gsap.to(chapter9, {
       opacity: 1,
       y: 0,
       duration: 1.5,
       delay: 0.5,
       ease: "power2.inOut",
-      onStart: () => {
-        chapter9.style.pointerEvents = "auto";
-      },
     });
 
     // Smooth scroll to Chapter 9

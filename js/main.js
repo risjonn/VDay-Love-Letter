@@ -66,11 +66,11 @@ ScrollTrigger.create({
   end: "bottom center",
   onEnter: () => {
     body.style.background =
-      "linear-gradient(to bottom, #fff7f9 0%, #ffe8ed 100%)";
+      "linear-gradient(to bottom, #fff5f8 0%, #ffe5ec 100%)";
   },
   onLeaveBack: () => {
     body.style.background =
-      "linear-gradient(to bottom, #fff7f9 0%, #ffe8ed 50%, #ffd4df 100%)";
+      "linear-gradient(to bottom, #fff5f8 0%, #ffe5ec 50%, #ffcce0 100%)";
   },
 });
 
@@ -81,11 +81,11 @@ ScrollTrigger.create({
   end: "bottom center",
   onEnter: () => {
     body.style.background =
-      "linear-gradient(to bottom, #ffe8ed 0%, #ffd4df 100%)";
+      "linear-gradient(to bottom, #ffe5ec 0%, #ffcce0 100%)";
   },
   onLeaveBack: () => {
     body.style.background =
-      "linear-gradient(to bottom, #fff7f9 0%, #ffe8ed 100%)";
+      "linear-gradient(to bottom, #fff5f8 0%, #ffe5ec 100%)";
   },
 });
 
@@ -96,11 +96,11 @@ ScrollTrigger.create({
   end: "bottom center",
   onEnter: () => {
     body.style.background =
-      "linear-gradient(to bottom, #ffd4df 0%, #ffc5cf 100%)";
+      "linear-gradient(to bottom, #ffcce0 0%, #ffb8d4 100%)";
   },
   onLeaveBack: () => {
     body.style.background =
-      "linear-gradient(to bottom, #ffe8ed 0%, #ffd4df 100%)";
+      "linear-gradient(to bottom, #ffe5ec 0%, #ffcce0 100%)";
   },
 });
 
@@ -111,11 +111,11 @@ ScrollTrigger.create({
   end: "bottom center",
   onEnter: () => {
     body.style.background =
-      "linear-gradient(to bottom, #ffc5cf 0%, #ffb4c3 100%)";
+      "linear-gradient(to bottom, #ffb8d4 0%, #ffa3c8 100%)";
   },
   onLeaveBack: () => {
     body.style.background =
-      "linear-gradient(to bottom, #ffd4df 0%, #ffc5cf 100%)";
+      "linear-gradient(to bottom, #ffcce0 0%, #ffb8d4 100%)";
   },
 });
 

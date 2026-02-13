@@ -154,6 +154,16 @@
   }
 }
 
+@keyframes subtleFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 /* ====================================
    CHAPTER-SPECIFIC ANIMATIONS
    ==================================== */
@@ -212,6 +222,24 @@
   animation:
     scaleIn 1s var(--ease-smooth) forwards,
     breathe 4s ease-in-out infinite;
+  position: relative;
+  background: linear-gradient(135deg, rgba(217, 113, 126, 0.05), rgba(217, 113, 126, 0.02));
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  border-left: 4px solid rgba(217, 113, 126, 0.3);
+}
+
+.scale-breathe::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, rgba(217, 113, 126, 0.5), transparent);
+  border-radius: 15px 0 0 15px;
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-smooth) forwards;
 }
 
 /* Chapter 3 - Photo: Will be handled by GSAP for parallax */
@@ -222,11 +250,49 @@
 /* Chapter 4 - Growth: Slide from Left */
 .slide-left {
   animation: slideInLeft 1s var(--ease-smooth) forwards;
+  position: relative;
+  background: linear-gradient(to right, rgba(217, 113, 126, 0.06), transparent);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+}
+
+.slide-left::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  width: 3px;
+  height: 30px;
+  background: linear-gradient(to right, rgba(217, 113, 126, 0.4), transparent);
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-smooth) forwards;
+  border-radius: 2px;
 }
 
 /* Chapter 6 - What Matters: Bold Bounce */
 .bounce-in {
   animation: gentleBounce 0.8s var(--ease-bounce) forwards;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(217, 113, 126, 0.1), rgba(217, 113, 126, 0.03));
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(217, 113, 126, 0.2);
+}
+
+.bounce-in::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  width: 4px;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(217, 113, 126, 0.5), transparent);
+  border-radius: 2px;
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-smooth) forwards;
 }
 
 /* Chapter 7 - The Pause: Glow Effect */
@@ -234,6 +300,37 @@
   animation:
     fadeInUp 1.5s var(--ease-smooth) forwards,
     glow 3s ease-in-out infinite;
+  display: inline-block;
+  position: relative;
+  padding: 0 30px;
+  background: linear-gradient(135deg, rgba(217, 113, 126, 0.08), transparent);
+  padding: 1.5rem 2.5rem;
+  border-radius: 30px;
+  border: 2px solid rgba(217, 113, 126, 0.25);
+}
+
+.glow-pulse::before,
+.glow-pulse::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, rgba(217, 113, 126, 0.6), rgba(217, 113, 126, 0.1));
+  border-radius: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  animation: subtleFloat 3s ease-in-out infinite;
+}
+
+.glow-pulse::before {
+  left: 15px;
+  animation-delay: 0.3s;
+}
+
+.glow-pulse::after {
+  right: 15px;
+  animation-delay: 0.6s;
 }
 
 /* Chapter 8 - The Question: Cinematic */
@@ -244,6 +341,25 @@
 /* Chapter 9 - Ending: Gentle Float */
 .gentle-float {
   animation: fadeInUp 1.2s var(--ease-smooth) forwards;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to right, rgba(217, 113, 126, 0.05), rgba(217, 113, 126, 0.02));
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+}
+
+.gentle-float::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  width: 2px;
+  height: 25px;
+  background: linear-gradient(to bottom, rgba(217, 113, 126, 0.4), transparent);
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: subtleFloat 4s ease-in-out infinite;
+  border-radius: 1px;
 }
 
 /* ====================================
