@@ -192,12 +192,12 @@ gsap.to(photo, {
   },
 });
 
-// Caption fade in
+// Caption fade in (from separate container below image)
 gsap.fromTo(
-  ".photo-caption",
+  ".photo-caption-container",
   { opacity: 0, y: 20, filter: "blur(5px)" },
   {
-    opacity: 0.8,
+    opacity: 1,
     y: 0,
     filter: "blur(0)",
     duration: 1,

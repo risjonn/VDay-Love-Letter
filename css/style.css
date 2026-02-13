@@ -141,7 +141,7 @@ p {
   padding: var(--spacing-lg) 0;
   position: relative;
   transition: all 0.8s var(--ease-smooth);
-  border-bottom: 1px solid rgba(201, 112, 125, 0.08);
+  border-bottom: 1px solid rgba(201, 112, 125, 0.12);
   overflow: hidden;
 }
 
@@ -170,10 +170,13 @@ p {
   background: linear-gradient(
     to right,
     transparent,
-    rgba(201, 112, 125, 0.3),
+    rgba(201, 112, 125, 0.4),
     transparent
   );
   transform: translateX(-50%);
+  opacity: 0;
+  animation: fadeInUp 1s var(--ease-smooth) forwards;
+  animation-delay: 0.5s;
 }
 
 .chapter-content {
@@ -200,8 +203,6 @@ p {
   opacity: 0;
   transform: scale(0.95);
   z-index: 5;
-  display: flex;
-  flex-direction: column;
 }
 
 .photo-container::before {
@@ -240,21 +241,43 @@ p {
   z-index: 3;
 }
 
+.photo-container img {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
 .photo-container img:hover {
   transform: scale(1.02) translateY(-8px);
+  box-shadow:
+    0 30px 95px rgba(201, 112, 125, 0.35),
+    0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.photo-caption-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 1.5rem auto 0;
+  text-align: center;
+  opacity: 1;
 }
 
 .photo-caption {
   font-family: var(--font-clean);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--text-accent);
-  margin-top: var(--spacing-sm);
   font-style: italic;
   font-weight: 500;
-  opacity: 0;
-  position: relative;
-  z-index: 10;
+  margin: 0 !important;
   letter-spacing: 0.3px;
+  display: block !important;
+  position: relative;
+  z-index: 100;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* ====================================
@@ -343,6 +366,12 @@ p {
    ==================================== */
 .glow-text {
   text-shadow: 0 0 20px var(--glow-color);
+}
+
+.emoji-heart {
+  display: inline-block;
+  font-size: 1.1em;
+  text-shadow: 0 0 8px rgba(232, 74, 95, 0.6);
 }
 
 .emphasis {
